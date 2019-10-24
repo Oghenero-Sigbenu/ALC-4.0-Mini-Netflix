@@ -1,0 +1,29 @@
+/* You can add global styles to this file, and also import other style files */
+ body{
+     background-color: black;
+     color: white;
+     
+ }
+
+ .nav{
+     display: flex;
+     border-bottom: 2px solid white;
+     height: 60px;
+     justify-content: space-between;
+ }
+ .menu{
+    display: flex;
+
+ }
+ .menu li, a{
+     text-decoration: none;
+     list-style: none;
+     color: white;
+     padding: 8px;
+ }
+ .menu a:hover{
+     color: #fff;
+     background-color: red;
+     border:1px solid red;
+ }
+ 
