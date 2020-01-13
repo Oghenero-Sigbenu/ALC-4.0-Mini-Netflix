@@ -4,10 +4,10 @@
         <button>Search</button>
     </div>
     <div class="movies">
-        <div *ngFor="let movie of filteredMovies" class="movie-cards">
-            <img src={{movie.image.url}} [alt]='movie.image.name'/>
-            <h5><a [routerLink]="['/movie', movie.objectId]">{{movie.title}}</a></h5>
-            <p>Release Year: {{movie.releaseYear}}</p>
+        <div *ngFor="let movie of movies" class="movie-cards">
+            <img src={{movie.image?.url}} [alt]='movie.image.name'/>
+            <h5><a [routerLink]="['/movie', movie.id]">{{movie.title}}</a></h5>
+            <p>Release Year: {{movie?.releaseYear}}</p>
             <!-- <div class="genre">
                 <h4>Genre:</h4>
             <div *ngFor="let gen of movie.genre">  

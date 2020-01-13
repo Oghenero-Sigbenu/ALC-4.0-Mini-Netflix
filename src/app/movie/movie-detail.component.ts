@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+ import { Component, OnInit } from '@angular/core';
 import { IMovie } from './movie';
 import {ActivatedRoute} from "@angular/router";
 import { MovieService } from './movie.service';
@@ -10,16 +10,24 @@ import { MovieService } from './movie.service';
 
 export class MovieDetailComponent implements OnInit {
   pageTitle: string = 'Movie Detail';
-  movies: IMovie;
+  movie:any;
   productService: any;
   MovieService: any;
   errorMessage: string;
-  
+  param: any;
+  getMovie: any;
+  id;
+  ActivatedRoute: any;
+ 
   constructor(private route: ActivatedRoute,
               private movieService: MovieService) { }
 
   ngOnInit() {
-    let param = +this.route.snapshot.paramMap.get('objectId');
+    // let param = this.movieService.getMovie(+this.route.snapshot.params['1']);
+    let id =  this.route.snapshot.params['id'];
+     this.movie =this.movieService.getMovie(id);
+      //  this.movies = movies.map(m => m.id === this.id);
+    // let param = this.route.snapshot.paramMap.get('objectId');
     // if (param) {
     //   const id = +param;
     //   this.getMovie(id);

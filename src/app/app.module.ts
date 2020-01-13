@@ -9,7 +9,7 @@ import { AppComponent } from './app.component';
 import { MovieListComponent } from './movie/movie.list.component';
 import { MovieDetailComponent } from './movie/movie-detail.component';
 import { LoginComponent } from './login/login.component';
-import { HomeComponent } from './home/home.component';
+// import { HomeComponent } from './home/home.component';
 import { PageNotFoundComponent } from './notFound/notFound.component';
 
 @NgModule({
@@ -18,7 +18,7 @@ import { PageNotFoundComponent } from './notFound/notFound.component';
     MovieListComponent,
     MovieDetailComponent,
     LoginComponent,
-    HomeComponent,
+    // HomeComponent,
     PageNotFoundComponent
   ],
   imports: [
@@ -30,7 +30,7 @@ import { PageNotFoundComponent } from './notFound/notFound.component';
       {path: 'movies', component: MovieListComponent},
       {path: 'movie/:id', component: MovieDetailComponent},
       {path: 'login', component:LoginComponent},
-      {path: 'home', component:HomeComponent},
+      {path: 'home', component:MovieListComponent},
       {path: '', redirectTo:'home', pathMatch: 'full'},
       {path: '*', redirectTo:'home', pathMatch: 'full'},
       {path: '*', component: PageNotFoundComponent}
@@ -40,3 +40,4 @@ import { PageNotFoundComponent } from './notFound/notFound.component';
   bootstrap: [AppComponent]
 })
 export class AppModule { }
+   

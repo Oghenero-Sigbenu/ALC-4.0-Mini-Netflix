@@ -21,8 +21,8 @@ export class MovieListComponent implements OnInit {
     this.filteredMovies= this.listFilter ? this.performFilter(this.listFilter) : this.movies;
   }
   
-  movies: IMovie[];
-  filteredMovies: IMovie[];
+  movies: any[];
+  filteredMovies: any[];
 
   //dependency injection
   constructor(private movieService: MovieService) { 
@@ -35,13 +35,15 @@ export class MovieListComponent implements OnInit {
     movie.title.toLocaleLowerCase().indexOf(filterBy) !== -1)
   };
 
-  ngOnInit(): void {
-    this.movieService.getMovies().subscribe({
-      next: movies => {
-        this.movies = movies;
-        this.filteredMovies = this.movies;
-      },
-      error: err => this.errorMessage = err
-    });
+  ngOnInit( ) {
+    console.log("yes i am")
+    this.movies = this.movieService.getMovies()
+    // this.movieService.getMovies().subscribe({
+    //   next: movies => {
+    //     this.movies = movies;
+    //     this.filteredMovies = this.movies;
+    //   },
+    //   error: err => this.errorMessage = err
+    // });
   }
 }

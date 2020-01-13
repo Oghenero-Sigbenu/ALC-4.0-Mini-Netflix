@@ -1,9 +1,10 @@
 export interface IMovie{
-    objectId: number;
+    id: any;
+    objectId: string;
     title: string;
-    releaseYear: number;
+    releaseYear: any;
     genre: string;
     image: string;
     description: string;
-    rating: number
+    rating: any;
 }

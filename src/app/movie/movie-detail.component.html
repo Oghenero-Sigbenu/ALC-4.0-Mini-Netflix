@@ -1,9 +1,10 @@
-<div *ngIf='movies'>
+<div>
+    <h2>Detailshyy</h2>
     <div>
-        {{pageTitle +':'+ movies?.title}}
+        {{pageTitle +':'+ movie?.title}}
     </div>
     <div class='row'>
-            <div class='col-md-4'>Name:</div>
-            <div class='col-md-8'>{{movies.rating}}hhhhh</div>
+            <div class='col-md-4'>Name:{{movie?.title}}</div>
+            <!-- <div class='col-md-8'>{{movie.rating}}hhhhh</div> -->
     </div>
 </div>
